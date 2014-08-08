@@ -14,7 +14,7 @@
     <script src="/static/js/bootstrap.js"></script>
 </head>
 <body>
-<div class="blog-masthead">
+<div class="navbar navbar-inverse navbar-fixed-top blog-masthead" role="navigation">
     <div class="container">
         <nav class="nav navbar-nav blog-nav">
             <a class="blog-nav-item active" href="#">主页</a>
@@ -23,7 +23,9 @@
             <a class="blog-nav-item" href="/notes">说明</a>
         </nav>
         <nav class="nav navbar-nav blog-nav blog-nav-right">
+            <div class="blog-nav-item">
             <input type="text" class="blog-nav-search" />
+                </div>
             <a class="blog-nav-item" href="/notes">说明</a>
             <a class="blog-nav-item" href="/me">自我介绍</a>
         </nav>
@@ -31,17 +33,20 @@
 </div>
 
 <div class="container">
+{#
     <div class="blog-header">
         <h1 class="blog-title">官方博客</h1>
 
         <p class="lead blog-description">我的小小博客</p>
     </div>
-    <div class="row">
+#}
+    <div class="row" style="padding-top: 10px">
         <div class="col-sm-8 blog-main">
             <div class="blog-post">
                 <h2 class="blog-post-title">文章1</h2>
 
                 <p class="blog-post-meta">2014-08-07 22:56</p>
+                <hr style="border-top-color:#ccc">
 
                 <p>This blog post shows a few different types of content that's supported and styled with Bootstrap.
                     Basic typography, images, and code are all supported.</p>
@@ -136,10 +141,20 @@
         </div>
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
             <div class="sidebar-module sidebar-module-inset">
-                <h4>About</h4>
-
+                <h4>About Me</h4>
                 <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet
                     fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            </div>
+            <div class="sidebar-module">
+                <h4>分类</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">技术</a></li>
+                    <li><a href="#">生活</a></li>
+                    <li><a href="#">July 2013</a></li>
+                    <li><a href="#">June 2013</a></li>
+                    <li><a href="#">May 2013</a></li>
+                    <li><a href="#">April 2013</a></li>
+                </ol>
             </div>
             <div class="sidebar-module">
                 <h4>Archives</h4>
@@ -171,9 +186,8 @@
     <div class="blog-footer">
         <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.
         </p>
-
         <p>
-            <a href="#">Back to top</a>
+            <a href="#">返回顶部</a>
         </p>
     </div>
 </div>
